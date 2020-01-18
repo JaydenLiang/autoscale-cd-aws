@@ -4,7 +4,9 @@
   "description": "Autoscale AWS Continuous Deployment Tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "audit-check": "npm audit",
+    "vbump-patch": "npm run audit-check; npm version patch -m \"bump version to %s for a release.\""
   },
   "author": "Jayden Liang (jliang01@fortinet.com)",
   "license": "MIT",
@@ -18,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/fortinet-devops-tool/autoscale-cd-aws/issues"
   },
-  "homepage": "https://github.com/fortinet-devops-tool/autoscale-cd-aws#readme"
+  "homepage": "https://github.com/fortinet-devops-tool/autoscale-cd-aws#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
