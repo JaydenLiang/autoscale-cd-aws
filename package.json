@@ -1,6 +1,6 @@
 {
   "name": "autoscale-cd-aws",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Autoscale AWS Continuous Deployment Tool",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,12 @@
   "homepage": "https://github.com/fortinet-devops-tool/autoscale-cd-aws#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "commander": "^4.1.0",
+    "shelljs": "^0.8.3"
+  },
+  "peerDependencies": {
+    "aws-sdk": "^2.606.0"
   }
 }
