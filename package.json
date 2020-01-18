@@ -1,0 +1,22 @@
+{
+  "name": "autoscale-cd-aws",
+  "version": "0.0.0",
+  "description": "Autoscale AWS Continuous Deployment Tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jayden Liang (jliang01@fortinet.com)",
+  "license": "MIT",
+  "bin": {
+    "autoscale-cd-aws": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortinet-devops-tool/autoscale-cd-aws.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fortinet-devops-tool/autoscale-cd-aws/issues"
+  },
+  "homepage": "https://github.com/fortinet-devops-tool/autoscale-cd-aws#readme"
+}
