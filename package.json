@@ -1,12 +1,16 @@
 {
   "name": "autoscale-cd-aws",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Autoscale AWS Continuous Deployment Tool",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "audit-check": "npm audit",
-    "vbump-patch": "npm run audit-check; npm version patch -m \"bump version to %s for a release.\""
+    "build": "exit 0",
+    "preversion": "npm audit",
+    "version": "npm run build",
+    "postversion": "echo run postversion script.",
+    "vbump-patch": "npm version patch -m \"bump version to %s for a patch release.\"",
+    "vbump-pre-beta": "npm version prerelease --preid \"beta\" -m \"bump version to %s for a pre-release.\""
   },
   "author": "Jayden Liang (jliang01@fortinet.com)",
   "license": "MIT",
