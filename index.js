@@ -240,7 +240,8 @@ const initAWSCLI = command => {
 const create = async (bucket, keyPrefix, templatePath, command) => {
     initAWSCLI(command);
     const templateUrl = `https://s3.amazonaws.com/${PATH.join(bucket, keyPrefix, templatePath)}`;
-    const paramVariableMap = command.override && genOverriddenParamMap(command.override) || new Map();
+    const paramVariableMap =
+        (command.override && genOverriddenParamMap(command.override)) || new Map();
     paramVariableMap.set('S3BucketName', bucket);
     paramVariableMap.set('S3KeyPrefix', `${keyPrefix}/`);
     paramVariableMap.set('QSS3BucketName', bucket);
