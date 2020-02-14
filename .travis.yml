@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- stable
+- '6'
+- '4'
+
+deploy:
+  provider: releases
+  on:
+    tags: true
