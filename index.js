@@ -75,7 +75,7 @@ const genPassword = (length, containSymbol = false) => {
 
 const uploadDeploymentPackageToS3 = (sourceDir, bucket, keyPrefix) => {
     const s3Destination = `s3://${PATH.join(bucket, keyPrefix)}`;
-    const command = `aws s3 sync ${sourceDir} ${s3Destination} --no-progress`;
+    const command = `aws s3 sync ${sourceDir} ${s3Destination} --delete --no-progress`;
     return new Promise((resolve, reject) => {
         SHELL.exec(command, { silent: false }, (code, stdout, stderr) => {
             if (code !== 0) {
