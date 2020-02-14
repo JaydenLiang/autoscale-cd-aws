@@ -1,6 +1,6 @@
 {
     "name": "autoscale-cd-aws",
-    "version": "0.0.1",
+    "version": "0.0.2-beta.0",
     "description": "Autoscale AWS Continuous Deployment Tool",
     "main": "index.js",
     "scripts": {
